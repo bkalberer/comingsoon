@@ -1,3 +1,29 @@
+/**
+ * Author: DaniS1448 (https://github.com/DaniS1448)
+ * 
+ * Sets the default values for the construction page and updates the page content
+ * based on the user's location and language.
+ * 
+ * @constant {string} defaultCountry - The default country code.
+ * @constant {string} defaultLanguage - The default language code.
+ * @constant {string} defaultTitle - The default title for the page.
+ * @constant {string} defaultMessage - The default message for the page.
+ * @constant {string} defaultCopyright - The default copyright message.
+ * @constant {number} currentYear - The current year.
+ * 
+ * @event DOMContentLoaded - Event triggered when the DOM is fully loaded.
+ */
+
+/**
+ * Fetches the user's location and language, and updates the page content accordingly.
+ * If the user's country matches the default country, the default values are used.
+ * Otherwise, the content is translated to the user's language throw Google Translate API.
+ * 
+ * @async
+ * @function getLocationAndSetTexts
+ * @returns {Promise<void>} - A promise that resolves when the content is updated.
+ */
+
 const defaultCountry = "ES"; // US
 const defaultLanguage = "es"; // en
 const defaultTitle = "Bajo construcción"; // Under construction
@@ -6,10 +32,10 @@ const defaultCopyright = "Todos los derechos reservados"; // All rights reserved
 const currentYear = new Date().getFullYear();
 
 document.addEventListener("DOMContentLoaded", function () {
-	getLocationAndSetMessage();
+	getLocationAndSetTexts();
 });
 
-async function getLocationAndSetMessage() {
+async function getLocationAndSetTexts() {
 	document.querySelector(".title").textContent = window.location.hostname;
 	const subTitle = document.querySelector(".sub-title");
 	const copyright = document.querySelector('.copyright');
