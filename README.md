@@ -26,7 +26,7 @@ View the demo on [GitHub Pages](https://danis1448.github.io/Auto-Under-Construct
 ![Preview](https://github.com/DaniS1448/Auto-Under-Construction-Page/blob/main/preview_english.gif?raw=true)<br/>  
 
 ### 🤝 Contributing
-CSS Style forked from [CodePen - Tiaan](https://codepen.io/tiaan/pen/QKmyzr)
+CSS Style inspiration from [CodePen - Tiaan](https://codepen.io/tiaan/pen/QKmyzr)
 
 ### 🛡️ License
 This project is licensed under the MIT License - see the [`LICENSE`](LICENSE) file for details.

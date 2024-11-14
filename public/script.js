@@ -10,6 +10,7 @@
  * @constant {string} defaultMessage - The default message for the page.
  * @constant {string} defaultCopyright - The default copyright message.
  * @constant {number} currentYear - The current year.
+ * @constant {number} numStars - The number of stars to display in the background.
  * 
  * @event DOMContentLoaded - Event triggered when the DOM is fully loaded.
  */
@@ -30,8 +31,10 @@ const defaultTitle = "Bajo construcción"; // Under construction
 const defaultMessage = "Grandes cosas están por llegar"; // Great things are yet to come
 const defaultCopyright = "Todos los derechos reservados"; // All rights reserved
 const currentYear = new Date().getFullYear();
+const numStars = 500;
 
 document.addEventListener("DOMContentLoaded", function () {
+	createStars();
 	getLocationAndSetTexts();
 });
 
@@ -61,5 +64,28 @@ async function getLocationAndSetTexts() {
 		subTitle.textContent = defaultMessage;
 		document.title = defaultTitle;
 		copyright.textContent = `© ${currentYear} ${window.location.hostname}. ${defaultCopyright}`;
+	}
+}
+
+function createStars(){
+	const starsContainer = document.getElementById('stars');
+
+	for (let i = 0; i < numStars; i++) {
+		const star = document.createElement('div');
+		star.classList.add('star');
+		star.style.top = `${Math.random() * 150}%`;
+		star.style.left = `${Math.random() * 100}%`;
+		const size = Math.random() * 1.5 + 1;
+		star.style.width = `${size}px`;
+		star.style.height = `${size}px`;
+		star.style.background = '#fff';
+		star.style.animation = `moveUp ${Math.random() * 30 + 10}s linear infinite`;
+		starsContainer.appendChild(star);
+
+		// Reset the position of the star when it reaches the top of the page
+		star.addEventListener('animationiteration', () => {
+			star.style.top = '100%';
+			star.style.left = `${Math.random() * 100}%`;
+		});
 	}
 }
