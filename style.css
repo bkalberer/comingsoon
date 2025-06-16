@@ -1,0 +1,161 @@
+.stars {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-image: radial-gradient(ellipse at bottom, #162536 0%, #05060b 100%);
+}
+
+.star {
+	position: absolute;
+	border-radius: 50%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	color: #ecf0f1;
+	background-color: #000;
+	font-family: Arial, sans-serif;
+	overflow: hidden;
+}
+
+main {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.title {
+	font-family: monospace;
+	font-size: 5rem;
+	text-align: center;
+	animation: fadeIn 0.5s ease-in 0.2s;
+	margin: 0;
+	padding: 0;
+}
+
+.hr-container {
+	animation: fadeIn 0.5s ease-in 0.2s;
+	display: flex;
+	justify-content: center;
+}
+
+.hr {
+	border: 0;
+	height: 1px;
+	width: 100%;
+	background: #ffffff;
+	margin: 20px 0;
+	display: inline-block;
+	margin: 10px 0px;
+	padding: 0;
+}
+
+.sub-title {
+	font-size: 2rem;
+	text-align: center;
+	animation: fadeIn 0.5s ease-in 0.2s;
+	margin: 0;
+	padding: 0;
+}
+
+.copyright {
+	font-size: .6rem;
+	text-align: center;
+	padding: 20px;
+	animation: fadeIn 0.5s ease-in 0.2s;
+	opacity: 0;
+	animation-fill-mode: forwards;
+}
+
+footer {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: end;
+}
+
+@media only screen and (max-width: 300px) {
+	.title {
+		font-size: 1rem;
+	}
+
+	.sub-title {
+		font-size: 0.2rem;
+	}
+
+	.copyright {
+		font-size: .4rem;
+	}
+}
+
+@media only screen and (min-width: 300px) {
+	.title {
+		font-size: 1.5rem;
+	}
+
+	.sub-title {
+		font-size: 0.7rem;
+	}
+
+	.copyright {
+		font-size: .5rem;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.title {
+		font-size: 2rem;
+	}
+
+	.sub-title {
+		font-size: 1rem;
+	}
+
+	.copyright {
+		font-size: .6rem;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.title {
+		font-size: 5rem;
+	}
+
+	.sub-title {
+		font-size: 1.5rem;
+	}
+
+	.copyright {
+		font-size: 1rem;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes moveUp {
+	0% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(-100vh);
+	}
+}
