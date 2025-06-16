@@ -63,7 +63,7 @@ async function getLocationAndSetTexts() {
 		console.error("Error:", error);
 		subTitle.textContent = defaultMessage;
 		document.title = defaultTitle;
-		copyright.textContent = `© ${currentYear} ${window.location.hostname}. ${defaultCopyright}`;
+		copyright.textContent = `${defaultCopyright}`;
 	}
 }
 
