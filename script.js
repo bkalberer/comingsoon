@@ -31,7 +31,7 @@ const defaultTitle = "Kalberer Wedding | 12.6.2025";
 const defaultMessage = "The Lord has done great things for us; we are glad. -Psalm 126:3";
 const defaultCopyright = "kalbererwedding.com"; 
 const currentYear = new Date().getFullYear();
-const numStars = 500;
+const numStars = 256;
 
 document.addEventListener("DOMContentLoaded", function () {
 	createStars();
@@ -50,7 +50,7 @@ async function getLocationAndSetTexts() {
 		if (country === defaultCountry) {
 			document.title = defaultTitle;
 			subTitle.textContent = defaultMessage;
-			copyright.textContent = `© ${currentYear} ${window.location.hostname}. ${defaultCopyright}.`;
+			copyright.textContent = `${defaultCopyright}.`;
 		} else {
 			const textsToTranslate = `${defaultMessage}\n${defaultTitle}\n${defaultCopyright}`;
 			const translateResponse = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=${defaultLanguage}&tl=${language}&dt=t&q=${encodeURIComponent(textsToTranslate)}`);
