@@ -25,11 +25,11 @@
  * @returns {Promise<void>} - A promise that resolves when the content is updated.
  */
 
-const defaultCountry = "ES"; // US
-const defaultLanguage = "es"; // en
-const defaultTitle = "Bajo construcción"; // Under construction
-const defaultMessage = "Grandes cosas están por llegar"; // Great things are yet to come
-const defaultCopyright = "Todos los derechos reservados"; // All rights reserved
+const defaultCountry = "US"; // US
+const defaultLanguage = "en"; // en
+const defaultTitle = "Coming soon...";
+const defaultMessage = "The Lord has done great things for us; we are glad. -Psalm 126:3";
+const defaultCopyright = "kalbererwedding.com"; 
 const currentYear = new Date().getFullYear();
 const numStars = 500;
 
