@@ -27,7 +27,7 @@
 
 const defaultCountry = "US"; // US
 const defaultLanguage = "en"; // en
-const defaultTitle = "Coming soon...";
+const defaultTitle = "Kalberer Wedding | 12.6.2025";
 const defaultMessage = "The Lord has done great things for us; we are glad. -Psalm 126:3";
 const defaultCopyright = "kalbererwedding.com"; 
 const currentYear = new Date().getFullYear();
