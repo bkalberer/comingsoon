@@ -57,7 +57,7 @@ async function getLocationAndSetTexts() {
 			const translation = await translateResponse.json();
 			subTitle.textContent = translation[0][0][0];
 			document.title = translation[0][1][0];
-			copyright.textContent = `© ${currentYear} ${window.location.hostname}. ${translation[0][2][0]}.`;
+			copyright.textContent = `${defaultCopyright}`;
 		}
 	} catch (error) {
 		console.error("Error:", error);
