@@ -50,7 +50,7 @@ async function getLocationAndSetTexts() {
 		if (country === defaultCountry) {
 			document.title = defaultTitle;
 			subTitle.textContent = defaultMessage;
-			copyright.textContent = `${defaultCopyright}.`;
+			copyright.textContent = `${defaultCopyright}`;
 		} else {
 			const textsToTranslate = `${defaultMessage}\n${defaultTitle}\n${defaultCopyright}`;
 			const translateResponse = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=${defaultLanguage}&tl=${language}&dt=t&q=${encodeURIComponent(textsToTranslate)}`);
