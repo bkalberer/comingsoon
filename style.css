@@ -31,7 +31,8 @@ main {
 }
 
 .title {
-	font-family: monospace;
+	font-family: TheSeasons;
+   	src: url("fonts/Fontspring-theseasons-bd.otf") format("opentype");
 	font-size: 5rem;
 	text-align: center;
 	animation: fadeIn 0.5s ease-in 0.2s;
