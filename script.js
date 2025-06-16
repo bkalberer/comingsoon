@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 async function getLocationAndSetTexts() {
-	document.querySelector(".title").textContent = window.location.hostname;
+	document.querySelector(".title").textContent = "12.6.2025";
 	const subTitle = document.querySelector(".sub-title");
 	const copyright = document.querySelector('.copyright');
 	try {
