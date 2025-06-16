@@ -83,6 +83,13 @@ footer {
 	align-items: end;
 }
 
+@font-face {
+    font-family: TheSeasons;
+    src: url("fonts/Fontspring-theseasons-bd.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 @media only screen and (max-width: 300px) {
 	.title {
 		font-size: 1rem;
